@@ -289,9 +289,9 @@ Route Optimization
 Model Validation
        ↓
 Dashboard & Decision Support
+## 📁 Project Structure
 
-📁 Project Structure
-
+```text
 logistics_week1_github_project/
 │
 ├── README.md
@@ -327,7 +327,6 @@ logistics_week1_github_project/
     ├── modeling.py
     ├── clustering.py
     └── optimization.py
-
 ⚙️ Technologies Used
 
 Python
