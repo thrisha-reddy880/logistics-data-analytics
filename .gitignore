@@ -1,0 +1,26 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Data files
+data/*.csv
+data/*.xlsx
+data/*.zip
+
+# Generated outputs
+outputs/*.png
+outputs/*.csv
+outputs/*.xlsx
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
