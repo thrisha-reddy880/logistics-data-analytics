@@ -1,295 +1,222 @@
-Strategic Planning and Data Exploration in Logistics
+# 📦 Logistics Week 1 — Strategic Planning and Data Exploration
 
-Week 1 Internship Project
+## 📌 Project Overview
 
-A data science project focused on exploring logistics and supply-chain
-data to identify delivery delays, evaluate operational KPIs, understand
-shipping-mode performance, and establish a roadmap for predictive
-analytics and route optimization.
+This project focuses on **strategic planning and data exploration in logistics and supply chain management**.
 
-📌 Project Overview
+The objective is to analyze logistics data, identify delivery and shipping patterns, calculate important KPIs, and explore analytical approaches such as **regression, classification, clustering, and optimization**.
 
-Efficient logistics management is essential for reducing delivery
-delays, controlling transportation costs, and improving customer
-satisfaction.
+This project was developed as part of **Week 1 of a technical/data science internship**.
 
-This Week 1 project uses the DataCo Smart Supply Chain dataset to
-perform exploratory data analysis and establish a strategic foundation
-for a logistics analytics solution.
+---
 
-The project focuses on:
+## 🎯 Project Objectives
 
-Delivery performance analysis
+- Understand logistics and supply chain operations.
+- Explore and preprocess logistics data.
+- Identify delivery and shipping patterns.
+- Calculate important logistics KPIs.
+- Analyze shipping modes and delivery performance.
+- Perform Exploratory Data Analysis (EDA).
+- Understand regression and classification approaches.
+- Apply clustering for segmentation.
+- Explore route optimization using Operations Research.
+- Develop an end-to-end roadmap for logistics analytics.
 
-Logistics KPI calculation
+---
 
-Shipping-mode comparison
+## 📊 Dataset
 
-Market-level order analysis
+The project uses the **DataCo Smart Supply Chain Dataset**, a publicly available logistics and supply-chain dataset.
 
-Data quality assessment
+**Dataset Source:**  
+[Kaggle — DataCo SMART Supply Chain for Big Data Analysis](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
 
-Predictive modeling planning
+### Dataset Statistics
 
-Customer/order clustering
+| Metric | Value |
+|---|---:|
+| Records | 180,519 |
+| Columns | 53 |
+| Duplicate Rows | 0 |
+| Unique Orders | 65,752 |
 
-Route optimization planning
+### Data Quality Observations
 
-🎯 Project Objectives
+Some columns contain missing values, particularly:
 
-Understand the structure and quality of logistics data.
+- Product Description
+- Order Zipcode
+- Customer Lname
+- Customer Zipcode
 
-Identify major delivery-performance problems.
+The raw dataset is **not included in this repository** to keep the repository lightweight.
 
-Calculate meaningful logistics KPIs.
+---
 
-Compare delivery performance across shipping modes.
+# 📈 Key Performance Indicators (KPIs)
 
-Explore order distribution across markets.
+The following KPIs were calculated during Week 1 analysis:
 
-Prepare the dataset for predictive analytics.
+| KPI | Result |
+|---|---:|
+| Late Delivery Rate | **57.28%** |
+| Average Actual Shipping Days | **3.50 days** |
+| Average Scheduled Shipping Days | **2.93 days** |
+| Average Shipping Variance | **0.57 days** |
+| Unique Orders | **65,752** |
 
-Plan regression and classification models for delivery-risk
-prediction.
+---
 
-Identify opportunities for customer/order segmentation using
-clustering.
+## 🚚 Shipping Mode Analysis
 
-Design an optimization approach for transportation and route
-planning.
+| Shipping Mode | Orders | Avg. Shipping Days | Late Rate |
+|---|---:|---:|---:|
+| First Class | 10,079 | 2.00 | 100.00% |
+| Same Day | 3,571 | 0.48 | 47.83% |
+| Second Class | 12,778 | 3.99 | 79.73% |
+| Standard Class | 39,324 | 4.00 | 39.77% |
 
-Create a reproducible GitHub-ready data science workflow.
+These results show that **delivery performance varies significantly across shipping modes**, making shipping-mode analysis an important area for further investigation.
 
-📊 Dataset
+---
 
-Dataset: DataCo Smart Supply Chain for Big Data Analysis
+# 📊 Exploratory Data Analysis
 
-The dataset contains approximately 180,519 records and 53 columns
-covering orders, customers, products, shipping, delivery performance,
-sales, and market information.
+The Week 1 analysis generated the following visualizations.
 
-The raw dataset is intentionally not included in this GitHub
-repository because it is a large public dataset. Download it from the
-original public source and place it locally in:
+## 🚚 Shipping Days Distribution
 
-data/DataCoSupplyChainDataset.csv
+![Shipping Days Distribution](outputs/shipping_days_distribution.png)
 
-The repository's .gitignore prevents accidental uploading of the raw
-dataset.
+This visualization shows the distribution of actual shipping days across the dataset.
 
-Dataset Sources
+---
 
-Kaggle: DataCo Smart Supply Chain for Big Data Analysis
+## ⚠️ Late Delivery Rate by Shipping Mode
 
-Mendeley Data: DataCo Supply Chain Dataset
+![Late Delivery Rate by Shipping Mode](outputs/late_rate_by_shipping_mode.png)
 
-🔎 Week 1 Data Exploration
+This visualization compares late delivery rates across different shipping modes.
 
-Dataset Profile
+---
 
-Metric                                                 Result
+## 🌍 Orders by Market
 
-Total records                                     180,519
-Total columns                                          53
-Duplicate rows                                          0
-Unique orders                                      65,752
-Completely missing Product Description values     180,519
-Missing Order Zipcode values                      155,679
+![Orders by Market](outputs/orders_by_market.png)
 
-The missing-value analysis is retained as part of the data-quality
-assessment. Fields with extensive missingness should be evaluated before
-being used in future modeling.
+This visualization shows the distribution of orders across different global markets.
 
-📈 Key Logistics KPIs
+---
 
-KPI                                        Result
+# 🔬 Analytical Methodologies
 
-Late Delivery Rate                     57.28%
-Average Actual Shipping Days        3.50 days
-Average Scheduled Shipping Days     2.93 days
-Average Shipping Variance           0.57 days
-Unique Orders                          65,752
-
-Initial Interpretation
-
-The analysis indicates a significant delivery-performance issue. The
-late-delivery rate is 57.28%, meaning more than half of the analyzed
-records are flagged as late.
-
-Actual shipping time is also higher than scheduled shipping time:
-
-Actual average: 3.50 days
-
-Scheduled average: 2.93 days
-
-Average variance: 0.57 days
-
-These findings provide a clear starting point for further predictive and
-optimization analysis.
-
-🚚 Shipping Mode Analysis
-
-Shipping Mode      Unique Orders   Avg. Shipping Days     Late Rate
-
-First Class               10,079                 2.00   100.00%
-Same Day                   3,571                 0.48    47.83%
-Second Class              12,778                 3.99    79.73%
-Standard Class            39,324                 4.00    39.77%
-
-Observations
-
-Standard Class has the largest number of orders.
-
-First Class has the highest observed late-delivery rate in this
-dataset.
-
-Second Class also has a high late-delivery rate.
-
-Same Day has the lowest average shipping duration among the
-analyzed modes.
-
-Shipping-mode performance should be investigated further together
-with market, product, customer, and operational factors.
-
-Note: These observations are descriptive findings from the dataset and
-do not by themselves establish causation.
-
-🌎 Market-Level Exploration
-
-The project also analyzes order distribution across five markets:
-
-LATAM
-
-Europe
-
-Pacific Asia
-
-USA
-
-Africa
-
-The generated market visualization helps identify where order volume is
-concentrated and can support future market-specific logistics planning.
-
-📊 Visualizations
-
-The project generates the following charts:
-
-1. Distribution of Actual Shipping Days
-
-Shows the frequency of different actual shipping durations.
-
-
-
-2. Late Delivery Rate by Shipping Mode
-
-Compares delivery-delay rates across shipping modes.
-
-
-
-3. Orders by Market
-
-Shows the distribution of records across geographic markets.
-
-
-
-🧠 Data Science Methodologies
-
-1. Exploratory Data Analysis (EDA)
+## 1. Exploratory Data Analysis
 
 EDA is used to understand:
 
-Data structure
+- Dataset structure
+- Missing values
+- Duplicate records
+- Shipping patterns
+- Market distribution
+- Delivery performance
+- Shipping-mode performance
 
-Missing values
+---
 
-Duplicate records
+## 2. Regression
 
-Variable distributions
+Regression can be used to predict continuous logistics variables such as:
 
-Shipping performance
+- Shipping duration
+- Delivery time
+- Sales
+- Delivery cost
 
-Market patterns
+A future version of the project can use regression models to estimate expected delivery duration based on historical logistics information.
 
-Shipping-mode behavior
+---
 
-2. Regression
+## 3. Classification
 
-Regression can be used in future stages to predict continuous logistics
-outcomes such as:
+Classification can be used to predict whether an order is likely to be delivered late.
 
-Actual shipping duration
+### Example
 
-Shipping delay
-
-Transportation-related cost
-
-Expected delivery time
-
-3. Classification
-
-A classification model can predict whether an order is likely to
-experience a late delivery.
-
-The project includes a baseline Logistic Regression implementation that
-can be extended with additional features and model comparison.
-
-4. Clustering
-
-K-Means clustering can be used to identify groups of customers or order
-patterns based on variables such as:
-
-Order frequency
-
-Average order value
-
-Quantity
-
-Late-delivery rate
-
-5. Optimization
-
-Vehicle Routing Problem (VRP) techniques can be used to optimize
-delivery routes while considering:
-
-Distance
-
-Delivery time
-
-Vehicle capacity
-
-Customer demand
-
-Time windows
-
-Google OR-Tools is included as the planned optimization framework.
-
-🗺️ End-to-End Project Roadmap
-
-Business Problem
+```text
+Order Information
        ↓
+Machine Learning Model
+       ↓
+Late Delivery Prediction
+       ↓
+     Yes / No
+```
+
+The project includes a **Logistic Regression baseline** for this type of prediction.
+
+---
+
+## 4. Clustering
+
+Clustering can be used to identify groups with similar characteristics, such as:
+
+- Customers
+- Cities
+- Markets
+- Shipping patterns
+- Order behavior
+
+The project includes **K-Means clustering** as an initial segmentation approach.
+
+---
+
+## 5. Optimization
+
+Route optimization can help determine efficient delivery routes while considering:
+
+- Distance
+- Delivery time
+- Vehicle capacity
+- Customer locations
+- Time windows
+
+The project includes an initial **Vehicle Routing Problem (VRP)** planning module using **Google OR-Tools**.
+
+---
+
+# 🗺️ End-to-End Logistics Analytics Roadmap
+
+```text
 Data Collection
-       ↓
-Data Profiling
        ↓
 Data Cleaning
        ↓
+Data Preprocessing
+       ↓
 Exploratory Data Analysis
        ↓
-KPI Analysis
+KPI Calculation
        ↓
-Feature Engineering
+Statistical Analysis
        ↓
-Predictive Modeling
+Regression / Classification
        ↓
-Customer / Order Clustering
+Customer & Market Clustering
        ↓
 Route Optimization
        ↓
-Model Validation
+Model Evaluation
        ↓
-Dashboard & Decision Support
-## 📁 Project Structure
+Dashboard / Reporting
+       ↓
+Business Decision Making
+```
+
+---
+
+# 📁 Project Structure
 
 ```text
 logistics_week1_github_project/
@@ -327,179 +254,186 @@ logistics_week1_github_project/
     ├── modeling.py
     ├── clustering.py
     └── optimization.py
-⚙️ Technologies Used
+```
 
-Python
+---
 
-Pandas
+# 🛠️ Technologies Used
 
-NumPy
+- **Python**
+- **Pandas**
+- **NumPy**
+- **Matplotlib**
+- **Scikit-learn**
+- **Google OR-Tools**
+- **OpenPyXL**
+- **Git**
+- **GitHub**
 
-Matplotlib
+---
 
-Scikit-learn
+# ▶️ How to Run
 
-Google OR-Tools
+## 1. Clone the Repository
 
-VS Code
+```bash
+git clone https://github.com/thrisha-reddy880/logistics-week1-data-analysis.git
+```
 
-Git & GitHub
+## 2. Navigate to the Project
 
-🚀 How to Run the Project
+```bash
+cd logistics-week1-data-analysis
+```
 
-1. Clone the repository
+## 3. Install Dependencies
 
-git clone <YOUR_GITHUB_REPOSITORY_URL>
-cd logistics_week1_github_project
-
-2. Install dependencies
-
+```bash
 pip install -r requirements.txt
+```
 
-3. Add the dataset
+## 4. Add the Dataset
 
-Download the DataCo dataset and place the main CSV at:
+Download the DataCo Smart Supply Chain dataset and place the CSV file inside:
 
-data/DataCoSupplyChainDataset.csv
+```text
+data/
+```
 
-4. Run the Week 1 analysis
+The dataset file should be named:
 
+```text
+DataCoSupplyChainDataset.csv
+```
+
+## 5. Run the Analysis
+
+```bash
 python notebooks/01_week1_exploration.py
+```
 
-5. View generated outputs
+The generated analysis results will be available inside:
 
-The analysis creates files inside:
-
+```text
 outputs/
+```
 
-including KPI tables and visualization images.
+---
 
-📌 Key Business Problem
+# 💡 Key Business Problem
 
-The initial analysis highlights delivery delays as a major logistics
-problem.
+The analysis focuses on identifying factors that affect **logistics delivery performance**.
 
-With a late-delivery rate of 57.28%, the next stages of the project
-should investigate:
+The major observed issue is the relatively high **late delivery rate of 57.28%**.
 
-What factors contribute most to late delivery?
+The analysis can help organizations investigate:
 
-Which markets experience higher delivery risk?
+- Which shipping modes have higher delivery risks?
+- Which markets have greater order volumes?
+- Where are shipping delays occurring?
+- Which customer or market segments behave similarly?
+- How can delivery routes be optimized?
+- How can predictive analytics support logistics planning?
 
-Which shipping modes require operational improvement?
+---
 
-Can late deliveries be predicted before shipment?
+# 📈 Expected Business Impact
 
-Can customer/order segments help improve logistics planning?
+The proposed analytics approach can help logistics organizations:
 
-Can route optimization reduce delivery time and transportation
-inefficiency?
+- Reduce delivery delays.
+- Improve route planning.
+- Optimize transportation resources.
+- Identify high-risk deliveries.
+- Improve customer satisfaction.
+- Monitor operational KPIs.
+- Support data-driven decision making.
+- Improve supply-chain efficiency.
 
-💡 Expected Business Impact
+---
 
-A complete logistics analytics solution can help an organization:
+# 🚀 Future Enhancements
 
-Reduce late deliveries
+Future versions of the project can include:
 
-Improve delivery-time prediction
+- Advanced delivery-delay prediction.
+- Random Forest and XGBoost models.
+- Advanced customer segmentation.
+- Real-world route optimization.
+- Vehicle capacity constraints.
+- Delivery time-window constraints.
+- Interactive Power BI dashboard.
+- Real-time logistics monitoring.
+- Automated KPI reporting.
+- Deployment using Flask or Streamlit.
+- Integration with live logistics APIs.
 
-Select appropriate shipping modes
+---
 
-Optimize transportation routes
+# 📚 References
 
-Improve resource utilization
+1. **DataCo SMART Supply Chain Dataset**  
+   [Kaggle Dataset](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
 
-Identify high-risk orders
+2. **DataCo Supply Chain Dataset — Mendeley Data**  
+   [Mendeley Data](https://data.mendeley.com/datasets/8gx2fvg2k6/5)
 
-Segment customers and demand patterns
+3. **Google OR-Tools**  
+   [Google OR-Tools Documentation](https://developers.google.com/optimization)
 
-Support data-driven logistics decisions
+4. **Vehicle Routing Problem**  
+   [OR-Tools VRP Documentation](https://developers.google.com/optimization/routing/vrp)
 
-🔮 Future Enhancements
+5. **Vehicle Routing Problem with Time Windows**  
+   [OR-Tools VRPTW Documentation](https://developers.google.com/optimization/routing/vrptw)
 
-Future versions of this project can include:
+6. **Scikit-learn Clustering**  
+   [Scikit-learn Clustering Documentation](https://scikit-learn.org/stable/auto_examples/cluster/index.html)
 
-Advanced classification models such as Random Forest, XGBoost, or
-Gradient Boosting.
+7. **Supply Chain KPIs**  
+   [Shopify Supply Chain KPI Guide](https://www.shopify.com/in/blog/supply-chain-kpi/)
 
-Regression models for delivery-time prediction.
+---
 
-Customer segmentation using K-Means or hierarchical clustering.
+# ✅ Week 1 Deliverables
 
-Geographic route optimization using real coordinates.
+- [x] Background research
+- [x] Logistics dataset identification
+- [x] Data exploration
+- [x] Data quality analysis
+- [x] KPI calculation
+- [x] Shipping-mode analysis
+- [x] Market-level analysis
+- [x] Exploratory visualizations
+- [x] Regression methodology research
+- [x] Clustering methodology research
+- [x] Optimization methodology research
+- [x] End-to-end logistics analytics roadmap
+- [x] Strategic planning report
+- [x] GitHub project structure
 
-Vehicle capacity and time-window constraints.
+---
 
-Interactive Power BI or Streamlit dashboard.
+# 📌 Project Status
 
-Real-time logistics monitoring.
+**Week 1 — Completed ✅**
 
-Automated alerts for high-risk shipments.
+The project currently contains the strategic planning, dataset exploration, KPI analysis, visualization outputs, analytical methodology, and roadmap required for the first week.
 
-Model explainability using feature importance or SHAP.
+---
 
-Deployment as a web-based logistics decision-support application.
+# 👩‍💻 Author
 
-📚 References and Resources
+**K. Thrisha Reddy**
 
-DataCo Smart Supply Chain dataset --- public Kaggle dataset
+B.Tech — Computer Science and Engineering (Data Science)  
+Vijaya Institute of Technology for Women  
+Vijayawada, Andhra Pradesh, India
 
-Mendeley Data --- DataCo Supply Chain Dataset
+### 🔗 GitHub
 
-Google OR-Tools documentation --- vehicle routing and optimization
+https://github.com/thrisha-reddy880/logistics-week1-data-analysis
 
-Scikit-learn documentation --- clustering and machine learning
+---
 
-Supply-chain KPI references from industry resources
-
-📝 Week 1 Deliverables
-
-Background research
-
-Logistics problem definition
-
-Project objectives
-
-KPI identification
-
-Public dataset research
-
-Data profiling
-
-Data exploration
-
-KPI calculation
-
-Shipping-mode analysis
-
-Market analysis
-
-Visualization generation
-
-Regression/classification planning
-
-Clustering planning
-
-Route optimization planning
-
-Python implementation
-
-Strategic roadmap
-
-Week 1 documentation
-
-👩‍💻 Author
-
-K. Thrisha Reddy
-
-B.Tech --- Computer Science and Engineering (Data Science)
-
-Vijaya Institute of Technology for Women, Vijayawada
-
-⭐ Project Status
-
-Week 1 --- Strategic Planning and Data Exploration: COMPLETED
-
-The current version establishes the data foundation, identifies
-important logistics KPIs, performs exploratory analysis, and defines the
-roadmap for predictive analytics, clustering, and optimization.
+⭐ **If you find this project useful, consider giving the repository a star!**
