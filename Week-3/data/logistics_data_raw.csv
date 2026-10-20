@@ -1,0 +1,63 @@
+Order_ID,Order_Date,Delivery_Days,Shipping_Mode,Distance_km,Freight_Cost,Quantity,Customer_Segment,Delivery_Status
+100001,2026-03-21,11,Standard Class,355.4,4215.60,4,Consumer,Delivered
+100002,2026-01-04,4,First Class,126.8,1840.25,2,Corporate,On Time
+100003,2026-02-18,8,Second Class,574.2,3280.75,7,Home Office,Late
+100004,2026-03-09,3,Same Day,48.6,725.40,1,Consumer,Delivered
+100005,2026-01-27,,Standard Class,412.5,2650.80,5,Corporate,On Time
+100006,2026-02-11,7,Second Class,286.3,3945.20,9,Home Office,In Transit
+100007,2026-03-15,12,First Class,768.9,5180.45,3,Consumer,Late
+100008,2026-02-03,6,standard class,195.7,2310.60,6,Corporate,Delivered
+100009,2026-01-19,9,Same Day,89.2,1150.75,2,Home Office,On Time
+100010,2026-03-02,5,Standard Class,341.8,2765.30,8,Consumer,Delivered
+100011,2026-02-22,13,Second Class,621.5,4860.90,10,Corporate,Late
+100012,2026-01-08,4,First Class,102.3,,3,Home Office,On Time
+100013,2026-03-25,10,Same Day,77.5,960.40,2,Consumer,Delivered
+100014,2026-02-14,6,Standard Class,432.1,3155.85,5,Corporate,In Transit
+100015,2026-01-31,8, Standard Class ,508.6,3675.45,7,Home Office,Late
+100016,2026-03-07,2,First Class,65.4,680.25,1,Consumer,On Time
+100017,2026-02-26,14,Second Class,812.7,5920.80,11,Corporate,Late
+100018,2026-01-13,7,Same Day,,1325.60,4,Home Office,Delivered
+100019,2026-03-18,9,Standard Class,278.4,2475.35,6,Consumer,In Transit
+100020,2026-02-05,5,First Class,154.8,1855.90,3,Corporate,On Time
+100021,2026-01-24,11,Second Class,690.2,4540.70,8,Home Office,Late
+100022,2026-03-12,4,Same Day,91.7,1095.20,2,Consumer,Delivered
+100023,2026-02-20,8,Standard Class,375.6,2925.45,5,Corporate,On Time
+100024,2026-01-16,10,First Class,245.9,3380.60,9,Home Office,Late
+100025,2026-03-28,3,Second Class,188.2,2190.75,4,Consumer,Delivered
+100026,2026-02-09,7,Same Day,54.8,785.40,2,Corporate,On Time
+100027,2026-01-29,-3,Standard Class,425.7,3105.65,6,Home Office,In Transit
+100028,2026-03-05,12,First Class,733.5,5475.20,10,Consumer,Late
+100029,2026-02-16,6,Second Class,316.4,2680.90,5,Corporate,Delivered
+100030,2026-01-11,9,Same Day,128.5,1475.30,3,Home Office,On Time
+100031,2026-03-23,5,Standard Class,392.6,2845.70,7,Consumer,Delivered
+100032,2026-02-07,13,First Class,856.3,6250.45,12,Corporate,Late
+100033,2026-01-21,4,Second Class,221.8,2050.60,4,Home Office,On Time
+100034,2026-03-10,8,Same Day,72.4,910.35,2,Consumer,Delivered
+100035,2026-02-28,6,Standard Class,461.2,3325.80,8,Corporate,In Transit
+100036,2026-01-06,10,First Class,598.7,4380.25,5,Home Office,Late
+100037,2026-03-19,7,Second Class,287.3,2540.65,6,Consumer,On Time
+100038,2026-02-12,3,Same Day,43.5,620.80,1,Corporate,Delivered
+100039,2026-01-26,11,Standard Class,674.9,4725.40,9,Home Office,Late
+100040,2026-03-03,5,First Class,139.6,1725.55,3,Consumer,On Time
+100041,2026-02-24,8,Second Class,520.3,3860.75,7,Corporate,In Transit
+100042,2026-01-15,9,Same Day,-120,1180.60,2,Home Office,Delivered
+100043,2026-03-27,4,Standard Class,301.5,2455.90,5,Consumer,On Time
+100044,2026-02-10,12,First Class,789.4,5715.25,11,Corporate,Late
+100045,2026-01-23,6,Second Class,258.7,2350.80,4,Home Office,Delivered
+100046,2026-03-14,7,Same Day,82.6,895.45,2,Consumer,On Time
+100047,2026-02-02,10,Standard Class,445.8,3275.60,8,Corporate,In Transit
+100048,2026-02-19,5,First Class,167.4,2980.35,3,Home Office,Delivered
+100049,2026-01-10,9,Second Class,612.5,35000,9,Consumer,Late
+100050,2026-03-06,8,Same Day,96.3,1045.70,2,Corporate,On Time
+100051,2026-02-25,6,Standard Class,354.7,2715.85,6,Home Office,Delivered
+100052,2026-01-18,13,First Class,820.6,6050.40,10,Consumer,Late
+100053,2026-03-22,4,Second Class,205.3,1985.65,4,Corporate,On Time
+100054,2026-02-06,7,Same Day,61.9,755.20,2,Home Office,Delivered
+100055,2026-01-30,11,Standard Class,476.2,3460.75,7,Consumer,In Transit
+100056,2026-03-11,75,First Class,705.8,5250.60,11,Corporate,Late
+100057,2026-02-21,5,Second Class,329.5,2625.40,5,Home Office,On Time
+100058,2026-01-12,8,Same Day,84.7,985.35,2,Consumer,Delivered
+100059,2026-03-26,10,Standard Class,557.4,4120.80,8,Corporate,Late
+100060,2026-02-15,6,First Class,174.2,1925.65,3,Home Office,On Time
+100010,2026-03-02,5,Standard Class,341.8,2765.30,8,Consumer,Delivered
+100021,2026-01-24,11,Second Class,690.2,4540.70,8,Home Office,Late
