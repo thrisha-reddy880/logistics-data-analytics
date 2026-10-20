@@ -1,0 +1,12 @@
+Week 3 Submission: Logistics Data Exploration and Visualization
+
+GitHub Repository: https://github.com/thrisha-reddy880/logistics-data-analytics
+Week 2 Dataset: https://github.com/thrisha-reddy880/logistics-data-analytics/blob/main/week2/logistics_data_raw.csv
+
+For this task, I carried out exploratory data analysis on the simulated logistics dataset developed in Week 2. The dataset contains order dates, delivery duration, shipping mode, route distance, freight cost, order quantity, customer segment, and delivery status. I used Python with pandas for data preparation and descriptive statistics, and Matplotlib and Seaborn for visual analysis.
+
+The workflow first checked duplicate order identifiers, missing values, inconsistent category labels, and invalid physical values. Duplicate order IDs were reduced to one record, category strings were standardized, and non-positive delivery durations or distances were treated as missing rather than being changed to arbitrary values. Potential outliers were identified using the interquartile-range rule and retained with flags so that unusual values can be investigated instead of automatically removed. Summary tables and a JSON analysis summary are included to make the results reproducible.
+
+Six visualizations were created: a delivery-time histogram, average freight cost by shipping mode, a delivery-time box plot by mode, a distance-versus-freight scatter plot, a delivery-status count plot, and a correlation heatmap. Each chart was selected to answer a different question about distribution, comparison, variability, possible cost drivers, operational status, or relationships among numeric fields. The Word report explains the methodology, interpretation, limitations, and recommendations.
+
+Because the dataset is small and simulated, the results are exploratory rather than proof of real-world causation. The recommended next step is to collect a larger operational dataset with promised delivery dates, carrier information, route origins and destinations, and fuel or surcharge details. This would allow more reliable service-level analysis and stronger cost-driver investigation.
