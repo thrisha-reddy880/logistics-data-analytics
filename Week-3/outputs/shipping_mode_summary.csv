@@ -1,0 +1,5 @@
+Shipping_Mode,Orders,Mean_Delivery_Days,Median_Delivery_Days,Mean_Freight_Cost,Median_Freight_Cost,Mean_Distance_km
+First Class,15,12.53,10.0,3763.65,3880.42,429.97
+Same Day,14,7.07,7.5,993.68,972.88,77.64
+Second Class,14,7.5,7.0,5559.56,2980.82,423.21
+Standard Class,17,7.73,8.0,3188.58,3105.65,411.18

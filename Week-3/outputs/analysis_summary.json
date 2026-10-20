@@ -1,0 +1,97 @@
+{
+  "raw_rows": 62,
+  "unique_orders_after_deduplication": 60,
+  "duplicate_rows_removed": 2,
+  "missing_values_in_raw": {
+    "Delivery_Days": 1,
+    "Distance_km": 1,
+    "Freight_Cost": 1
+  },
+  "invalid_values_changed_to_missing": {
+    "nonpositive_delivery_days": 1,
+    "nonpositive_distance_km": 1,
+    "nonpositive_freight_cost": 0
+  },
+  "outlier_flags_iqr": {
+    "Delivery_Days": 1,
+    "Distance_km": 0,
+    "Freight_Cost": 1
+  },
+  "delivery_days": {
+    "count": 58,
+    "mean": 8.76,
+    "median": 7.5,
+    "std": 9.34,
+    "min": 2.0,
+    "max": 75.0
+  },
+  "freight_cost": {
+    "count": 59,
+    "mean": 3366.82,
+    "median": 2680.9,
+    "min": 620.8,
+    "max": 35000.0
+  },
+  "status_counts": {
+    "Delivered": 18,
+    "On Time": 18,
+    "Late": 16,
+    "In Transit": 8
+  },
+  "shipping_mode_summary": {
+    "First Class": {
+      "orders": 15,
+      "avg_days": 12.53,
+      "median_days": 10.0,
+      "avg_cost": 3763.65,
+      "avg_distance": 429.97
+    },
+    "Same Day": {
+      "orders": 14,
+      "avg_days": 7.07,
+      "median_days": 7.5,
+      "avg_cost": 993.68,
+      "avg_distance": 77.64
+    },
+    "Second Class": {
+      "orders": 14,
+      "avg_days": 7.5,
+      "median_days": 7.0,
+      "avg_cost": 5559.56,
+      "avg_distance": 423.21
+    },
+    "Standard Class": {
+      "orders": 17,
+      "avg_days": 7.73,
+      "median_days": 8.0,
+      "avg_cost": 3188.58,
+      "avg_distance": 411.18
+    }
+  },
+  "correlations": {
+    "Delivery_Days": {
+      "Delivery_Days": 1.0,
+      "Distance_km": 0.416,
+      "Freight_Cost": 0.146,
+      "Quantity": 0.423
+    },
+    "Distance_km": {
+      "Delivery_Days": 0.416,
+      "Distance_km": 1.0,
+      "Freight_Cost": 0.46,
+      "Quantity": 0.851
+    },
+    "Freight_Cost": {
+      "Delivery_Days": 0.146,
+      "Distance_km": 0.46,
+      "Freight_Cost": 1.0,
+      "Quantity": 0.448
+    },
+    "Quantity": {
+      "Delivery_Days": 0.423,
+      "Distance_km": 0.851,
+      "Freight_Cost": 0.448,
+      "Quantity": 1.0
+    }
+  }
+}

@@ -1,0 +1,13 @@
+,Missing_Count
+Order_ID,0
+Order_Date,0
+Delivery_Days,2
+Shipping_Mode,0
+Distance_km,2
+Freight_Cost,1
+Quantity,0
+Customer_Segment,0
+Delivery_Status,0
+Delivery_Days_Outlier_Flag,0
+Distance_km_Outlier_Flag,0
+Freight_Cost_Outlier_Flag,0

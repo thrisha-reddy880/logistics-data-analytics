@@ -1,0 +1,5 @@
+,Delivery_Days,Distance_km,Freight_Cost,Quantity
+Delivery_Days,1.0,0.416,0.146,0.423
+Distance_km,0.416,1.0,0.46,0.851
+Freight_Cost,0.146,0.46,1.0,0.448
+Quantity,0.423,0.851,0.448,1.0
